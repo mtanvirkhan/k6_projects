@@ -1,0 +1,20 @@
+// https://paiza.io/projects/6Dc1LO0YUBM9DDmiMW43Fg?language=cpp
+#include <bits/stdc++.h>
+using namespace std;
+#define lli long long int
+ 
+int main(){
+    lli t = 1000;
+    lli device_model=rand() % 5 + 1, imei1=788877001950001, imei2=788877002950001, sales_region=rand() % 3 + 1, eSIMvalidDuration=rand() % 1998 + 1, mode=10, overwrite_sim=0;
+    srand(time(nullptr));
+    while(t--){
+        cout<<"\"DhDRAvaMx328PsIHDWIR\",\"BJIT_Rifat\",\""<<sales_region<<"\",\""<<eSIMvalidDuration<<"\",\""<<imei1<<"\",\""<<imei2<<"\",\""<<device_model<<"\",\"1\""<<",\"0\""<<"\n";
+        imei1++;
+        imei2++;
+        device_model=rand() % 5 + 1;
+        sales_region=rand() % 3 + 1;
+        eSIMvalidDuration=rand() % 1998 + 1;
+        if(mode==40) mode = 10;
+        else mode+=10;
+    }
+}
